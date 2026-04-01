@@ -1,0 +1,22 @@
+# Java/Maven
+/target/
+/.idea/
+*.iml
+*.log
+.DS_Store
+*.class
+*.jar
+*.war
+*.ear
+/.settings/
+/.classpath
+/.project
+/.vscode/
+*.swp
+*~
+# OS
+Thumbs.db
+Desktop.ini
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+
