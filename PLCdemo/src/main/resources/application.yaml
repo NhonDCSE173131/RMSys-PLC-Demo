@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: PLCdemo
+  main:
+    web-application-type: none
+  config:
+    import: optional:classpath:machine-registry.yaml
+
+server:
+  port: ${SIMULATOR_PORT:8095}
+
+simulator:
+  backend-base-url: ${SIMULATOR_BACKEND_BASE_URL:http://localhost:8080}
+  ingest-path: /api/v1/ingest/telemetry
+  tick-ms: 1000
+  simulator-node: SIM-LOCAL-01
+  console-enabled: true
+

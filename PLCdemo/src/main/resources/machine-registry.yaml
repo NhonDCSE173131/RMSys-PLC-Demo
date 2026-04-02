@@ -1,0 +1,156 @@
+simulator:
+  machines:
+    - enabled: true
+      machine-id: a1000000-0000-0000-0000-000000000001
+      machine-code: CNC-01
+      display-name: "CNC Lathe 01"
+      machine-type: CNC_MACHINE
+      program-name: JOB-AXLE-01
+      tool-code: T-AXLE-01
+      min-idle-power-kw: 1.2
+      nominal-run-power-kw: 4.8
+      max-power-kw: 6.8
+      normal-temp-min-c: 38
+      normal-temp-max-c: 55
+      warning-temp: 68
+      danger-temp: 82
+      normal-vibration-min: 1.1
+      normal-vibration-max: 2.2
+      max-spindle-speed: 6000
+      normal-feed-rate: 850
+      base-cycle-time-sec: 42
+      tool-wear-rate-per-cycle: 0.08
+      maintenance-decay-rate: 0.01
+
+    - enabled: true
+      machine-id: a1000000-0000-0000-0000-000000000002
+      machine-code: CNC-02
+      display-name: "CNC Milling 01"
+      machine-type: CNC_MACHINE
+      program-name: JOB-HOUSING-02
+      tool-code: T-HOUSING-02
+      min-idle-power-kw: 1.5
+      nominal-run-power-kw: 5.5
+      max-power-kw: 8.0
+      normal-temp-min-c: 40
+      normal-temp-max-c: 58
+      warning-temp: 72
+      danger-temp: 88
+      normal-vibration-min: 1.3
+      normal-vibration-max: 2.5
+      max-spindle-speed: 8000
+      normal-feed-rate: 1100
+      base-cycle-time-sec: 35
+      tool-wear-rate-per-cycle: 0.06
+      maintenance-decay-rate: 0.012
+
+    - enabled: true
+      machine-id: a1000000-0000-0000-0000-000000000003
+      machine-code: ROB-01
+      display-name: "Robot Arm 01"
+      machine-type: ROBOT_ONLY
+      program-name: JOB-PICKPLACE-03
+      tool-code: EOAT-GRIP-03
+      min-idle-power-kw: 0.8
+      nominal-run-power-kw: 2.4
+      max-power-kw: 3.6
+      normal-temp-min-c: 30
+      normal-temp-max-c: 42
+      warning-temp: 55
+      danger-temp: 68
+      normal-vibration-min: 0.3
+      normal-vibration-max: 0.9
+      max-spindle-speed: 2000
+      normal-feed-rate: 400
+      base-cycle-time-sec: 18
+      tool-wear-rate-per-cycle: 0.04
+      maintenance-decay-rate: 0.008
+
+    - enabled: true
+      machine-id: a1000000-0000-0000-0000-000000000004
+      machine-code: LATHE-01
+      display-name: "Robot CNC Cell"
+      machine-type: ROBOT_CNC_CELL
+      program-name: JOB-CELL-04
+      tool-code: T-CELL-04
+      min-idle-power-kw: 1.0
+      nominal-run-power-kw: 3.8
+      max-power-kw: 5.6
+      normal-temp-min-c: 35
+      normal-temp-max-c: 52
+      warning-temp: 65
+      danger-temp: 80
+      normal-vibration-min: 0.8
+      normal-vibration-max: 1.8
+      max-spindle-speed: 4500
+      normal-feed-rate: 620
+      base-cycle-time-sec: 55
+      tool-wear-rate-per-cycle: 0.10
+      maintenance-decay-rate: 0.009
+
+    - enabled: true
+      machine-id: a1000000-0000-0000-0000-000000000005
+      machine-code: DRILL-01
+      display-name: "CNC Grinding 01"
+      machine-type: CNC_MACHINE
+      program-name: JOB-GRIND-05
+      tool-code: T-GRIND-05
+      min-idle-power-kw: 0.6
+      nominal-run-power-kw: 2.1
+      max-power-kw: 3.2
+      normal-temp-min-c: 28
+      normal-temp-max-c: 44
+      warning-temp: 58
+      danger-temp: 72
+      normal-vibration-min: 0.5
+      normal-vibration-max: 1.4
+      max-spindle-speed: 3000
+      normal-feed-rate: 320
+      base-cycle-time-sec: 22
+      tool-wear-rate-per-cycle: 0.12
+      maintenance-decay-rate: 0.007
+
+    - enabled: ${SIMULATOR_ENABLE_EXTRA_MACHINES:false}
+      machine-id: a1000000-0000-0000-0000-000000000006
+      machine-code: MC-06
+      display-name: "Assembly Press 01"
+      machine-type: PRESS_MACHINE
+      program-name: JOB-PRESS-06
+      tool-code: D-PRESS-06
+      min-idle-power-kw: 0.9
+      nominal-run-power-kw: 3.3
+      max-power-kw: 4.8
+      normal-temp-min-c: 33
+      normal-temp-max-c: 49
+      warning-temp: 63
+      danger-temp: 76
+      normal-vibration-min: 0.6
+      normal-vibration-max: 1.5
+      max-spindle-speed: 2400
+      normal-feed-rate: 540
+      base-cycle-time-sec: 28
+      tool-wear-rate-per-cycle: 0.07
+      maintenance-decay-rate: 0.009
+
+    - enabled: ${SIMULATOR_ENABLE_EXTRA_MACHINES:false}
+      machine-id: a1000000-0000-0000-0000-000000000007
+      machine-code: MC-07
+      display-name: "Inspection Cell 01"
+      machine-type: INSPECTION_CELL
+      program-name: JOB-INSPECT-07
+      tool-code: CAM-INSPECT-07
+      min-idle-power-kw: 0.4
+      nominal-run-power-kw: 1.6
+      max-power-kw: 2.5
+      normal-temp-min-c: 26
+      normal-temp-max-c: 38
+      warning-temp: 48
+      danger-temp: 58
+      normal-vibration-min: 0.2
+      normal-vibration-max: 0.7
+      max-spindle-speed: 1200
+      normal-feed-rate: 180
+      base-cycle-time-sec: 16
+      tool-wear-rate-per-cycle: 0.03
+      maintenance-decay-rate: 0.006
+
